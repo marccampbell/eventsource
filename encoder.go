@@ -37,7 +37,7 @@ func (enc *encoder) Encode(ev Event) (err error) {
 			return
 		}
 	}
-	if _, err = io.WriteString(enc.w, "\n"); err != nil {
+	if _, err = io.WriteString(enc.w, "\n\n"); err != nil {
 		err = fmt.Errorf("Eventsource: Encode: %s", err)
 	}
 	return
